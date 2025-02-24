@@ -1,6 +1,8 @@
 import inquirer from 'inquirer';
 import generateMarkdown from "./utils/generateMarkdown";
 import fs from "fs";
+import figlet from "figlet";
+import colors from "colors";
 
 const questions = [
     {
@@ -97,4 +99,13 @@ async function init(): Promise<void> {
     }
 }
 
-init().catch(console.error);
+figlet("Welcome to READMEGenerator App", (err: any, data: any) => {
+    if (err) {
+        console.log("Something went wrong...".red);
+        console.dir(err);
+        return;
+    }
+    console.log(colors.rainbow(data)); // Aplica el color correctamente
+    init().catch(console.error);
+});
+

@@ -12,9 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
+    "figlet": "^1.8.0",
     "inquirer": "8.2.4"
   },
   "devDependencies": {
+    "@types/figlet": "^1.7.0",
     "@types/inquirer": "^9.0.7",
     "typescript": "^5.7.3"
   }
