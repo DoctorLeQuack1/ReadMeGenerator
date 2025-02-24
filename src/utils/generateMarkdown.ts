@@ -43,17 +43,17 @@ function generateMarkdown (data: any) : string {
 # ${data.project_name}
 
 ## Description
-What was your motivation?
-- ${data.project_description}
+<u>What is the proyect motivation?</u>  
+${data.project_description}
 
-Why did you build this project?
-- ${data.project_justification}
+<u>Why did you build this project?</u>  
+${data.project_justification}
 
-What problem does it solve?
-- ${data.project_solution}
+<u>What problem does it solve?</u>  
+${data.project_solution}
 
-What did you learn?
-- ${data.project_learnings}
+<u>What did you learn?</u>  
+${data.project_learnings}
 
 ## Table of Contents
 - [Installation](#installation)
