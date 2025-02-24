@@ -99,4 +99,4 @@ async function init() {
         console.error("Error obtained:", error);
     }
 }
-init();
+init().catch(console.error);
