@@ -90,7 +90,7 @@ function writeToFile(fileName: string, data : any): void {
 async function init(): Promise<void> {
     try {
         const ans: any = await inquirer.prompt(questions);
-        writeToFile('../README.md', ans);
+        writeToFile('./README.md', ans);
     } catch (error) {
         console.error("Error obtained:", error);
     }
