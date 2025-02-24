@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license: string) : string {
 
-  const str_ = `![Static Badge](https://img.shields.io/badge/${license}-Licence-blue)
+  const str_ = `![Static Badge](https://img.shields.io/badge/${license.replace(/\s+/g, '')}-Licence-blue)
 
 This project is covered under the ${license} License.`
 
