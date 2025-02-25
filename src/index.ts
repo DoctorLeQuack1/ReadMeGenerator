@@ -4,6 +4,7 @@ import fs from "fs";
 import figlet from "figlet";
 import colors from "colors";
 
+// Declare all of our questions for the inquirer prompt
 const questions = [
     {
         type: 'input',
@@ -80,6 +81,7 @@ const questions = [
     },
 ];
 
+// Write file function
 function writeToFile(fileName: string, data : any): void {
     fs.writeFile(fileName, generateMarkdown(data), (err) => {
         if (err) {
@@ -90,6 +92,7 @@ function writeToFile(fileName: string, data : any): void {
     });
 }
 
+// Init is an async function that will fetch all of our answers
 async function init(): Promise<void> {
     try {
         const ans: any = await inquirer.prompt(questions);
@@ -99,6 +102,8 @@ async function init(): Promise<void> {
     }
 }
 
+
+// Figlet will prompt our welcome message
 figlet("Welcome to READMEGenerator App", (err: any, data: any) => {
     if (err) {
         console.log("Something went wrong...".red);
